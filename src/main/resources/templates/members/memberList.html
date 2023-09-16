@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        /* 테이블 스타일 */
+        table {
+            width: 100%; /* 테이블 100% 너비 설정 */
+            height: 100%;
+            line-height: 100%;
+            border-collapse: collapse; /* 테이블 셀 경계 병합 */
+            background-color: green; /* 전체적인 배경 색상 설정 */
+            position: fixed;
+        }
+
+        /* 테이블 헤더 스타일 */
+        th {
+            background-color: lightgreen; /* 헤더 배경 색상 설정 */
+        }
+
+        /* 테이블 데이터 행 스타일 */
+        tr {
+            background-color: lightgreen; /* 데이터 행 배경 색상 설정 */
+            text-align: center;
+        }
+
+        /* 마우스를 가져다 대었을 때 행 색상 변경 */
+        tr:hover {
+            background-color: yellow; /* 마우스를 가져다 대었을 때 색상 변경 */
+        }
+
+        /* 마우스를 가져다 대었을 때 '이름' 셀 색상 변경 */
+        tr:hover td:nth-child(2) {
+            background-color: orange; /* '이름' 셀 색상 변경 */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>이름</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="member : ${members}">
+                <td th:text="${member.id}"></td>
+                <td th:text="${member.name}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Home</title>
+    <style>
+        body {
+            background-color: #FFFFFF; /* 배경 색상을 초록색으로 설정 */
+        }
+
+        .container {
+            width: 100%; /* 컨테이너의 너비를 100%로 설정 */
+            max-width: 800px; /* 최대 너비 설정 (원하는 크기로 조정) */
+            margin: 0 auto; /* 가운데 정렬 */
+            padding: 20px; /* 패딩 추가 (내용과 컨테이너 경계 간격) */
+            background-color: #CCFFE5; /* 컨테이너 색상을 초록색으로 설정 */
+        }
+
+        a {
+            display: inline-block; /* 링크를 인라인 블록 요소로 표시 */
+            margin-right: 10px; /* 링크 간격 설정 */
+            padding: 10px 20px; /* 패딩 설정 (버튼 모양) */
+            background-color: #008000; /* 버튼 색상을 초록색으로 설정 */
+            color: #FFFFFF; /* 텍스트 색상을 흰색으로 설정 */
+            text-decoration: none; /* 밑줄 제거 */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div>
+        <h1>Hello Spring</h1>
+        <p>회원 기능</p>
+        <p>
+            <a href="/members/new">회원 가입</a>
+            <a href="/members">회원 목록</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>

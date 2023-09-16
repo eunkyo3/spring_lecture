@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        body {
+            background-color: lightgreen; /* 전체 배경색을 초록색으로 설정합니다. */
+            text-align: center; /* 내용을 가운데 정렬합니다. */
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .form-group {
+            text-align: left; /* 폼 내용은 왼쪽 정렬합니다. */
+        }
+
+        input[type="text"] {
+            width: 100%; /* 입력란을 전체 너비로 설정합니다. */
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: green; /* 버튼 배경색을 초록색으로 설정합니다. */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form action="/members/new" method="post">
+        <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
+        </div>
+        <button type="submit">등록</button>
+    </form>
+</div>
+</body>
+</html>
